@@ -1,207 +1,193 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelCraft Designs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #000;
-    color: #f2f2f2;
-    transition: background 0.3s ease;
-  }
-  header {
-    background: #1a1a1a;
-    color: #e60023;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 3rem;
-    margin: 0;
-    animation: fadeInDown 1s ease;
-  }
-  header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #ff4d4d;
-    animation: fadeInUp 1s ease;
-  }
-  nav {
-    background: #111;
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 20px;
-  }
-  nav a {
-    color: #e60023;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #ff3333;
-  }
-  section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  .services, .contact {
-    display: grid;
-    gap: 20px;
-  }
-  .service-box {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(255,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .service-box:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  input, textarea, button {
-    padding: 12px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    width: 100%;
-  }
-  input, textarea {
-    background: #333;
-    color: #fff;
-  }
-  button {
-    background: #e60023;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  button:hover {
-    background: #ff4d4d;
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #999;
-    margin-top: 40px;
-  }
-
-  @keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2rem;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixelCraft | Creative Digital Studio</title>
+  <meta name="description" content="PixelCraft – Creative studio for design, video, and digital media.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #f2f2f2;
     }
-    nav {
-      flex-direction: column;
+
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1601933470928-c81b48c98e2c?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
     }
-  }
-</style>
 
+    .hero-text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 60px 20px;
+      border-radius: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      color: #e60023;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+      color: #ff4d4d;
+    }
+
+    .cta-button {
+      background: #e60023;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #ff1a3c;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about, .services {
+      display: grid;
+      gap: 40px;
+    }
+
+    .service-card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, button {
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    input, textarea {
+      background: #333;
+      color: #fff;
+    }
+
+    button {
+      background: #e60023;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff4d4d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #999;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* WhatsApp button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      .hero-text h1 { font-size: 2rem; }
+      section { padding: 30px 15px; }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>PixelCraft Designs</h1>
-    <p>Creativity. Strategy. Growth. – Digital solutions for modern brands</p>
+    <div class="hero-text">
+      <h1>PixelCraft</h1>
+      <p>Bold Designs. Creative Visuals. Digital Impact.</p>
+      <a href="#services" class="cta-button">Explore Services</a>
+    </div>
   </header>
-  <section style="text-align: center;">
-  <img src="https://images.unsplash.com/photo-1601933470928-c81b48c98e2c?auto=format&fit=crop&w=1200&q=80" 
-       alt="PixelCraft Banner" 
-       style="max-width: 100%; border-radius: 10px; margin-top: -20px;" />
-</section>
 
-  <section style="text-align: center;">
-  <img src="https://unsplash.com/photos/yellow-and-white-abstract-painting-_nWaeTF6qo0" 
-       alt="Banner" 
-       style="max-width: 100%; height: auto; border-radius: 10px;" />
-</section>
-<section id="services" class="services">
-  <h2>Our Services</h2>
-  <div class="service-box">
-    <h3>Social Media Management</h3>
-    <p>Grow your audience and engagement...</p>
-  </div>
-
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>PixelCraft Designs is a creative studio specializing in social media, design, events, and digital strategy. We help brands grow through visual excellence and smart marketing.</p>
+  <section class="about">
+    <h2>About PixelCraft</h2>
+    <p>We are a creative design studio specializing in digital branding, video editing, social media promotions, and visual storytelling. Let us bring your brand to life with vibrant design and compelling content.</p>
   </section>
 
-  <section id="services" class="services">
+  <section class="services" id="services">
     <h2>Our Services</h2>
-    <div class="service-box">
-      <h3>Social Media Management</h3>
-      <p>Grow your audience and engagement with professional content planning, post design, and scheduling.</p>
+    <div class="service-card">
+      <h3>🎨 Graphic Design</h3>
+      <p>Custom posters, branding kits, and marketing graphics tailored to your brand's identity.</p>
     </div>
-    <div class="service-box">
-      <h3>Poster & Visual Design</h3>
-      <p>Eye-catching designs for promotions, campaigns, and everyday brand content.</p>
+    <div class="service-card">
+      <h3>📱 Social Media Management</h3>
+      <p>Creative content and visuals for Instagram, Facebook, YouTube, and more.</p>
     </div>
-    <div class="service-box">
-      <h3>Event Promotion</h3>
-      <p>Creative marketing strategies to boost event visibility and participation.</p>
-    </div>
-    <div class="service-box">
-      <h3>Branding & Strategy</h3>
-      <p>Define your brand's voice and visual identity to connect with the right audience.</p>
+    <div class="service-card">
+      <h3>🎥 Video Editing & Motion</h3>
+      <p>Engaging video content and reels with cinematic transitions and sound design.</p>
     </div>
   </section>
 
-  <section id="portfolio">
-    <h2>Our Work</h2>
-    <p>Coming soon: A showcase of our best poster designs, branding kits, and event campaigns.</p>
-  </section>
-
-  <section id="contact" class="contact">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p>Email: hello@pixelcraftdesigns.com</p>
-    <p>WhatsApp: +91 XXXXX XXXXX</p>
-    <p>Follow us: [Instagram] [Facebook] [LinkedIn]</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 PixelCraft Designs. All rights reserved.</p>
+    <p>&copy; 2025 PixelCraft. Designed with ❤️ and red.</p>
   </footer>
+
+  <a class="whatsapp" href="https://wa.me/918848913042" target="_blank">💬 Chat</a>
+
 </body>
 </html>
